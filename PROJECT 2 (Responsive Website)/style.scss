@@ -1,0 +1,603 @@
+@font-face {
+    font-family: satoshi;
+    src: url(./63cffc20aa8997095067596f_Satoshi-Light.woff);
+}
+
+@font-face {
+    font-family: Robomono;
+    src: url(./L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2);
+}
+
+@font-face {
+    font-family: Chillax;
+    src: url(./63cffc0a3942456e003bc265_Chillax-Regular.woff);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: satoshi;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    color: white;
+    font-size: clamp(14px, 1.4vw, 18px);
+}
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+@mixin flex-column($gap :0rem) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+section {
+    max-width: 1950px;
+}
+
+main {
+    width: 100%;
+    @include flex-column(0rem);
+    align-items: center;
+
+
+    section.view1 {
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+        
+
+
+        .top {
+            width: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom {
+            background-color: rgb(34, 34, 34);
+            padding: 2rem;
+            border-radius:0.7rem;
+            @include flex-column(3rem);
+
+            p{
+                font-family: Robomono;
+            }
+
+            .text {
+                @include flex-column(0.7rem);
+
+                h1{
+                    font-family: Chillax;
+                    font-weight: 200;
+                    font-size: 2.3rem;
+                    text-transform: uppercase
+                }
+
+                p{
+                    font-family: satoshi;
+                    font-weight: 200;
+                    opacity: 0.6;
+                    line-height:1.8rem;
+                    font-size: 1.3rem;
+                }
+
+                button {
+                    font-family: Robomono;
+                    width: fit-content;
+                    border: none;
+                    outline: none;
+                    padding: 0.4rem 1rem;
+                    border-radius: 0.5rem;
+                }
+            }
+        }
+    }
+
+    section.view2 {
+        @include flex-column(2.5rem);
+        width: 100%;
+        padding: 1rem;
+
+        .top,.bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .element {
+            text-align: center;
+            @include flex-column(0.3rem);
+
+            small {
+                font-family: Robomono;
+                font-size: 1.1rem;
+                opacity: 0.7;
+            }
+            h2 {
+                font-family: Chillax;
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+        }
+
+    }
+
+    section.view3 {
+        width: 100%;
+        padding: 1rem;
+        @include flex-column(1rem);
+
+        .top {
+            width: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom {
+            background-color: rgb(34, 34, 34);
+            padding: 2rem;
+            border-radius:0.7rem;
+            @include flex-column(3rem);
+
+            p{
+                font-family: Robomono;
+            }
+
+            .text {
+                @include flex-column(0.7rem);
+
+                h1{
+                    font-family: Chillax;
+                    font-weight: 200;
+                    font-size: 2.3rem;
+                    text-transform: uppercase
+                }
+
+                p{
+                    font-family: satoshi;
+                    font-weight: 200;
+                    opacity: 0.6;
+                    line-height:1.8rem;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    section.view4 {
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+
+        .top {
+            width: 100%;
+
+             img{
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom {
+            background-color: rgb(34, 34, 34);
+            padding: 2rem;
+            border-radius:0.7rem;
+            @include flex-column(3rem);
+
+            p{
+                font-family: Robomono;
+            }
+
+            .text {
+                @include flex-column(0.7rem);
+
+                h1{
+                    font-family: Chillax;
+                    font-weight: 200;
+                    font-size: 2.3rem;
+                    text-transform: uppercase
+                }
+
+                p{
+                    font-family: satoshi;
+                    font-weight: 200;
+                    opacity: 0.6;
+                    line-height:1.8rem;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    section.view5 {
+         width: 100%;
+         display: flex;
+         grid-template-columns: 1fr 1fr;
+         grid-template-areas: "team  ";
+         
+         .team {  
+           padding: 1rem;
+            h1{
+               font-size: 2.3rem;
+               font-family: Chillax;
+               text-align: start;
+               grid-area: team;
+               padding: 0rem 1rem;
+           }
+       }
+    }
+    
+    section.view6 {
+        width: 100%;
+        padding: 1rem;
+        @include flex-column(1rem);
+
+        .card1 {
+            width: 100%;
+            border-radius: 0.7rem;
+            background-image: url(./bgimg1.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+            @include flex-column(0rem);
+            justify-content: space-between;
+            padding: 1rem;
+
+            .icons,.bottom {
+                background-color: rgba(190, 190, 190, 0.432);
+                backdrop-filter: blur(4px);
+                border: 1px solid rgba(129, 126, 126, 0.546);
+                border-radius: 0.7rem;
+                padding: 1rem;
+            }
+
+            .top{
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+            .icons {
+                width: fit-content;
+                border-radius: 50%;
+            }
+
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    letter-spacing: 0.1rem;
+                    text-transform: uppercase;
+                }
+
+            }
+            
+        }
+
+        .card2 {
+            width: 100%;
+            border-radius: 0.7rem;
+            background-image: url(./bgimg2.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+            @include flex-column(0rem);
+            justify-content: space-between;
+            padding: 1rem;
+
+            .icons,.bottom {
+                background-color: rgba(190, 190, 190, 0.432);
+                backdrop-filter: blur(4px);
+                border: 1px solid rgba(129, 126, 126, 0.546);
+                border-radius: 0.7rem;
+                padding: 1rem;
+            }
+
+            .top{
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+            .icons {
+                width: fit-content;
+                border-radius: 50%;
+            }
+
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    letter-spacing: 0.1rem;
+                    text-transform: uppercase;
+                }
+
+            }
+            
+        }
+
+        .card3 {
+            width: 100%;
+            border-radius: 0.7rem;
+            background-image: url(./bgimg3.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+            @include flex-column(0rem);
+            justify-content: space-between;
+            padding: 1rem;
+
+            .icons,.bottom {
+                background-color: rgba(190, 190, 190, 0.432);
+                backdrop-filter: blur(4px);
+                border: 1px solid rgba(129, 126, 126, 0.546);
+                border-radius: 0.7rem;
+                padding: 1rem;
+            }
+
+            .top{
+                display: flex;
+                justify-content: flex-end;
+                gap: 1rem;
+            }
+            .icons {
+                width: fit-content;
+                border-radius: 50%;
+            }
+
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    letter-spacing: 0.1rem;
+                    text-transform: uppercase;
+                }
+
+            }
+            
+        }
+    }
+
+    section.view7{
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+
+        .top {
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 0.7rem;
+            }
+        }
+
+        .bottom {
+            background-color: rgb(34, 34, 34);
+            padding: 2rem;
+            border-radius:0.7rem;
+            @include flex-column(0.7rem);
+            justify-content: space-between;
+
+            p{
+                font-family: Robomono;
+                opacity: 0.7;
+            }
+            h1 {
+                font-family: Chillax;
+                text-transform: uppercase;
+                font-size: 2rem;
+            }
+
+            .btmbutton {
+                padding-top: 4rem;
+                display: flex;
+                gap: 1.2rem;
+                
+                button {
+                    padding: 0.6rem;
+                    border-radius: 50%;
+                }
+                p {
+                    opacity: 1;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+    }
+
+    section.view8{
+        width: 100%;
+        padding: 1rem;
+        padding-top: 0rem;
+
+        .contact{
+            position: relative;
+            @include flex-column(1rem);
+            width: 100%;
+            padding: 2rem;
+            background-color:#cebd63;
+            color: #1a1a1a;
+            border-radius: 0.7rem;
+            
+            p{
+                font-family: Robomono;
+            }
+
+            h1 {
+                font-family: Chillax;
+                text-transform: uppercase;
+                font-size: 2.9rem;
+                font-weight: 570;
+                line-height: 3.2rem;
+            }
+
+            button {
+                background-color: #1a1a1a;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 0.7rem;
+                font-size: 1rem;
+                font-family: Robomono , sans-serif;
+            }
+        }
+    }
+}
+
+@media (min-width:900px) {
+    main {
+
+        section.view1 {
+            flex-direction: row;
+            padding: 1rem 1rem;
+
+            .top,.bottom {
+                width: 50%;
+            }
+
+            .bottom {
+                justify-content: space-between;
+                padding: 2.8rem;
+
+                p{
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                }
+                
+                .text{
+
+                    h1{
+                        font-size: 3rem;
+                        font-weight:200;
+                    }
+
+                    p{
+                        opacity: 0.6;
+                        font-size: 1.2rem;
+                        line-height: 1.8rem;
+                        word-spacing: 0.2rem;
+                    }
+                }
+            }
+        }
+
+        section.view2 {
+            flex-direction: row;
+            padding: 1rem 1rem;
+        }
+
+        section.view3{
+            flex-direction: row-reverse;
+            padding: 1rem 1rem;
+
+            .top,.bottom {
+                width: 50%;
+            }
+
+            .bottom{
+                justify-content: space-between;
+                padding: 3.5rem;
+                
+                .paragraphs{
+                    display: flex;
+                    gap: 1rem;
+
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+        }
+
+        section.view4 {
+            flex-direction:row;
+            padding: 1rem 1rem;
+
+            .top,.bottom {
+                width: 50%;
+            }
+
+            .bottom{
+                justify-content: space-between;
+                padding: 3.5rem;
+                
+                .paragraphs{
+                    display: flex;
+                    gap: 1rem;
+
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+        }
+
+        section.view6 {
+            flex-direction: row;
+        }
+
+        section.view7 {
+            flex-direction: row;
+
+            .top,.bottom {
+                width: 50%;
+            }
+        }
+
+        section.view8 {
+            padding: 1rem 1rem;
+
+            .contact {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 3rem;
+
+                position: relative;
+
+                p {
+                    font-size: 0.75rem;
+                    letter-spacing: 2px;
+                }
+
+                h1 {
+                    max-width: 65%;
+                    font-size: 3.5rem;
+                    line-height: 3.4rem;
+                    font-weight: 400;
+                }
+
+                button {
+                    align-self: flex-end;
+                    width: auto;
+                    padding: 1rem 2.2rem;
+                    font-size: 0.9rem;
+                    white-space: nowrap;
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
