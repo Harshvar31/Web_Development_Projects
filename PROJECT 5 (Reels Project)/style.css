@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a1a,#1e1e1e, #000000);
+    padding:20px;
+}
+
+section{
+    height: 100%;
+    width: 350px;
+    background-color: black;
+    border-radius: 8px;
+    margin:auto;
+    /* overflow: hidden; */
+}
+
+.all-reels{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.all-reels::-webkit-scrollbar{
+    display: none;
+}
+
+.reels{
+    height: 100%;
+    width: 100%;
+    background-color: lightsteelblue;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.reels video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bottom{
+    padding: 15px 15px;
+    width: 100%;
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.749));
+    position: absolute;
+    bottom: 0;
+}
+
+.bottom .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.bottom .user h4{
+    color: whitesmoke;
+    text-transform: lowercase;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bottom .user img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bottom .user button{
+    color: white;
+    font-size: 10px;
+    padding: 6px 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.bottom .user button:active{
+    scale: 0.95;
+}
+
+.bottom>h3{
+    color: whitesmoke;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.right{
+    font-size: 18px;
+    width: 40px;
+    position: absolute;
+    color: white;
+    right: 0;
+    top: 55%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.right i{
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.right>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+.right h4{
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.right h6{
+    font-size: 13px;
+    font-weight: 400;
+    pointer-events: none;
+}
+
+.love{
+    color: red;
+}
+
+.mute{
+    opacity: 0.5;
+    background-color: #777;
+    color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.mute i{
+    opacity: 0.5;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.mute:active{
+    scale: 0.95;
+}
+
+.comment-popup {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    transition: bottom 0.3s ease;
+}
+
+.comment-popup input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.comment-popup.active {
+    bottom: 0;
+}
